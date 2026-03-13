@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Talent Academy</title>
+    <title>Enquire Now | Talent Academy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
     <nav>
-        <div class="logo-text" style="color:#FFD700; font-weight:bold;">TALENT ACADEMY</div>
-        <ul class="nav-links" style="display:flex; list-style:none; gap:20px;">
+        <div style="font-weight: bold; font-size: 1.5rem; color: var(--gold);">TALENT ACADEMY</div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="courses.html">Courses</a></li>
@@ -20,44 +18,37 @@
         </ul>
     </nav>
 
-    <section>
-        <h2>Get In Touch</h2>
+    <section style="padding: 80px 10%; text-align: center;">
+        <h2 style="color: var(--gold); margin-bottom: 20px;">ENQUIRE NOW</h2>
+        <p style="margin-bottom: 50px; color: #ccc;">Have questions? Reach out to us directly for admissions and course details.</p>
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-
-            <div class="card">
-                <h3 style="color: #FFD700;"><i class="fas fa-map-marker-alt"></i> Address</h3>
-                <p>Shubh Shree Complex, 1st Floor, Mundra Colony, Piplia Mandi, Dist. Mandsaur</p>
-
-                <hr style="margin: 20px 0; border: 0.5px solid #333;">
-
-                <h3 style="color: #FFD700;"><i class="fas fa-id-card"></i> Quick Contact</h3>
-                <div style="margin-top: 15px;">
-                    <a href="tel:+919691919947" class="btn btn-call" style="margin-bottom: 10px; display: inline-flex;">
-                        <i class="fas fa-phone-alt"></i> Call: 96919 19947
-                    </a>
-                    <br>
-                    <a href="https://wa.me/919691919947" class="btn btn-wa" style="display: inline-flex;">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                </div>
+            <div class="card fade-in">
+                <i class="fas fa-phone-alt" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
+                <h3>Call Us</h3>
+                <p style="margin: 15px 0;">Speak directly with our office for immediate assistance.</p>
+                <a href="tel:+919691919947" style="color: var(--gold); font-weight: bold; text-decoration: none; font-size: 1.2rem;">+91 96919 19947</a>
             </div>
 
-            <div class="card" style="text-align: center;">
-                <h3 style="color: #FFD700; margin-bottom: 15px;">Locate Us</h3>
-                <p>Aap niche diye button par click karke Google Maps par hamari location dekh sakte hain.</p>
-                <br>
-                <a href="https://www.google.com/maps/search/Shubh+Shree+Complex+Piplia+Mandi" target="_blank"
-                    class="btn" style="background: #444; color: white;">
-                    <i class="fas fa-directions"></i> Open in Maps
-                </a>
+            <div class="card fade-in">
+                <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: #25D366; margin-bottom: 20px;"></i>
+                <h3>WhatsApp Us</h3>
+                <p style="margin: 15px 0;">Chat with us for quick queries and documents.</p>
+                <a href="https://wa.me/919691919947" style="color: #25D366; font-weight: bold; text-decoration: none; font-size: 1.2rem;">Message Now</a>
             </div>
+        </div>
+
+        <div class="card fade-in" style="margin-top: 40px;">
+            <h3 style="color: var(--gold);"><i class="fas fa-map-marker-alt"></i> Visit Our Campus</h3>
+            <p style="margin-top: 10px;">Shubh Shree Complex, 1st Floor, Mundra Colony, Piplia Mandi, Dist. Mandsaur</p>
         </div>
     </section>
 
-    <footer style="text-align:center; padding: 40px; border-top: 1px solid #333;">
-        <p>Follow us on Instagram: <strong>@talentacademypiplia</strong></p>
-        <p style="margin-top: 10px;">© 2026 Talent Academy | Designed by [Your Name]</p>
-    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        });
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
 </body>
-
 </html>
