@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talent Academy | Excellence in Education</title>
+    <title>Talent Academy | Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
     <nav>
-        <div class="logo"><img src="logo.png" width="50" alt="TA"></div>
+        <div style="font-weight: bold; font-size: 1.5rem; color: var(--primary);">TALENT ACADEMY</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
-            <li><a href="contact.html" class="cta-nav">Enquire Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="hero">
+    <div class="hero fade-in">
         <h1>Welcome to Talent Academy, Piplia Mandi</h1>
         <p>Building a Strong Foundation for Your Future Excellence.</p>
-        <div class="btn-group">
+        <div style="margin-top: 25px;">
             <a href="tel:+919691919947" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
             <a href="https://wa.me/919691919947" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
+        <img src="classroom_main.jpg" alt="Our Classroom" class="classroom-preview fade-in">
     </div>
 
-    <section id="features">
-        <h2>Why Choose Us?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-            <div class="card"><i class="fas fa-file-invoice" style="color:var(--gold); font-size: 2rem;"></i>
-                <h3>Weekly Tests</h3>
-                <p>Regular performance analysis for every student.</p>
-            </div>
-            <div class="card"><i class="fas fa-book-open" style="color:var(--gold); font-size: 2rem;"></i>
-                <h3>Timely Syllabus</h3>
-                <p>Syllabus completion with deep conceptual clarity.</p>
-            </div>
-            <div class="card"><i class="fas fa-user-tie" style="color:var(--gold); font-size: 2rem;"></i>
-                <h3>Personal Attention</h3>
-                <p>Small batches for offline focused learning.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Address: Shubh Shree Complex, 1st Floor, Mundra Colony, Piplia Mandi</p>
-        <div style="margin: 20px 0;">
-            <a href="#" style="color: var(--gold); margin: 0 10px;"><i class="fab fa-instagram"></i></a>
-            <a href="#" style="color: var(--gold); margin: 0 10px;"><i class="fab fa-facebook"></i></a>
-        </div>
-        <p>© 2026 Talent Academy. Professional Offline Coaching.</p>
-    </footer>
+    <script>
+        // Simple Intersection Observer for Animations (AOS effect)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        });
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
 </body>
-
 </html>
