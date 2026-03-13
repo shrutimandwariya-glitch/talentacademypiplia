@@ -1,164 +1,53 @@
 :root {
-    --gold: #FFD700;
-    --dark-bg: #0a0a0a;
-    --card-bg: #1a1a1a;
-    --text: #ffffff;
+    --primary: #1a73e8; /* Professional Blue */
+    --gold: #b8860b;
+    --text-dark: #202124;
+    --text-light: #5f6368;
+    --bg-light: #ffffff;
+    --section-bg: #f8f9fa;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
 
-body {
-    background-color: var(--dark-bg);
-    color: var(--text);
-    overflow-x: hidden;
-}
-
-/* Navigation */
 nav {
-    background: rgba(10, 10, 10, 0.95);
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--gold);
+    background: white; padding: 15px 8%;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-}
-
-.cta-nav {
-    background: var(--gold);
-    color: black !important;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-}
+.nav-links { display: flex; list-style: none; gap: 25px; }
+.nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
 
 /* Hero Section */
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('classroom.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    text-align: center; padding: 100px 20px;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('classroom.jpg');
+    background-size: cover; background-position: center;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    color: var(--gold);
-    margin-bottom: 15px;
-}
+/* AOS Animation support classes */
+.fade-in { opacity: 0; transform: translateY(20px); transition: 0.6s all ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-}
-
-/* Buttons */
-.btn-group {
-    display: flex;
-    gap: 15px;
+.card {
+    background: white; padding: 30px; border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 20px;
+    transition: 0.3s; border-top: 4px solid var(--primary);
 }
 
 .btn {
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
+    padding: 12px 30px; border-radius: 5px; text-decoration: none;
+    font-weight: 600; display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-call { background: var(--primary); color: white; }
+.btn-wa { background: #25D366; color: white; margin-left: 10px; }
+
+.classroom-preview {
+    width: 90%; max-width: 800px; border-radius: 15px;
+    margin: 30px auto; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.btn-call {
-    background: var(--gold);
-    color: black;
-}
-
-.btn-wa {
-    background: #25D366;
-    color: white;
-}
-
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-/* Common Section Style */
-section {
-    padding: 80px 10%;
-}
-
-h2 {
-    color: var(--gold);
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-}
-
-/* Cards & Tables */
-.card {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #333;
-    transition: 0.3s;
-}
-
-.card:hover {
-    border-color: var(--gold);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--card-bg);
-}
-
-th,
-td {
-    padding: 15px;
-    border: 1px solid #333;
-    text-align: left;
-}
-
-th {
-    background: var(--gold);
-    color: black;
-}
-
-/* Footer */
-footer {
-    background: #000;
-    padding: 40px 10%;
-    border-top: 1px solid #333;
-    text-align: center;
-}
+footer { background: #f1f3f4; padding: 40px; text-align: center; border-top: 1px solid #ddd; }
