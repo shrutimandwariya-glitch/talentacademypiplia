@@ -1,15 +1,68 @@
-<section>
-    <h2>Meet Our Director</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;">
-        <img src="director.jpg" style="width: 300px; border-radius: 20px; border: 3px solid var(--gold);">
-        <div style="max-width: 600px;">
-            <h3 style="color: var(--gold); font-size: 2rem;">Sachin Karada</h3>
-            <p style="font-style: italic; color: #aaa;">M.Sc Chemistry, M.Sc Maths, MBA, B.Ed</p>
-            <br>
-            <p>At Talent Academy, we believe that discipline and proper mentorship are the keys to success. Our
-                institution provides a systematic environment where board exams and entrance tests are tackled with
-                expert strategies. Our results and the success of our students in Navodaya and Sainik schools speak for
-                our dedication.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Talent Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div style="font-weight: bold; font-size: 1.5rem; color: var(--primary);">TALENT ACADEMY</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section style="padding: 60px 10%;">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary);" class="fade-in">Meet Our Director</h2>
+        
+        <div class="card fade-in" style="display: flex; flex-wrap: wrap; gap: 40px; border-top: 5px solid var(--gold); align-items: flex-start;">
+            <img src="director.jpg" alt="Sachin Karada" style="width: 280px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="text-align: left; color: var(--text-dark); margin-bottom: 5px;">Sachin Karada</h2>
+                <p style="color: var(--gold); font-weight: bold; margin-bottom: 20px; font-size: 1.1rem;">Director & Founder</p>
+                
+                <h4 style="margin-bottom: 12px; color: var(--primary);"><i class="fas fa-user-graduate"></i> Academic Qualifications:</h4>
+                <ul style="list-style: none; margin-bottom: 25px; padding-left: 5px;">
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 8px;"></i> M.Sc Chemistry</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 8px;"></i> M.Sc Mathematics</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 8px;"></i> Master of Business Administration (MBA)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 8px;"></i> Bachelor of Education (B.Ed)</li>
+                </ul>
+
+                <div style="background: #f1f3f4; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <p style="margin-bottom: 5px;"><i class="fas fa-envelope" style="color: var(--primary);"></i> <strong>Email:</strong> talentacademypiplia@gmail.com</p>
+                    <p><i class="fas fa-phone-alt" style="color: var(--primary);"></i> <strong>Phone:</strong> +91 96919 19947</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+
+        <div class="card fade-in" style="margin-top: 30px; border-left: 5px solid var(--primary);">
+            <h3 style="margin-bottom: 15px; color: var(--primary);">Director's Message</h3>
+            <p style="font-size: 1.1rem; color: var(--text-light); text-align: justify;">
+                "At Talent Academy, we are committed to providing a disciplined and high-quality learning environment for every student. Our institution is built on the pillars of proper classroom sessions, expert mentorship, and consistent evaluation. We believe that every child has the potential to excel, and through our regular weekly tests and systematic approach, we ensure that their foundation is strong enough to tackle board exams and competitive entrance tests like Navodaya and Sainik School with confidence."
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // AOS Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        });
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
+
+    <footer>
+        <p>© 2026 Talent Academy | Piplia Mandi</p>
+    </footer>
+</body>
+</html>
