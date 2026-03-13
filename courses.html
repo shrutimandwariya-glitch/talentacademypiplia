@@ -1,28 +1,65 @@
-<section style="padding: 60px 10%;">
-    <h2 style="text-align: center; margin-bottom: 40px;">Our Specialized Courses</h2>
-    
-    <div class="card fade-in">
-        <h3 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-university"></i> Entrance Exam Coaching</h3>
-        <p>Special batches for competitive entrance exams including:</p>
-        <ul style="margin: 15px 20px;">
-            <li>Jawahar Navodaya Vidyalaya Selection Test (5th & 8th)</li>
-            <li>Sainik School Entrance Examination</li>
-            <li>Excellence School Entrance Test</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Talent Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div style="font-weight: bold; font-size: 1.5rem; color: var(--gold);">TALENT ACADEMY</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html" class="cta-nav">Enquire Now</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="card fade-in">
-        <h3 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-user-graduate"></i> Board Academic Classes</h3>
-        <p>Comprehensive subject coverage for State and Central Boards:</p>
-        <ul style="margin: 15px 20px;">
-            <li><strong>Class 12th:</strong> Physics, Chemistry, Mathematics (PCM), Biology (PCB), Commerce, and Arts.</li>
-            <li><strong>Class 10th:</strong> All Subjects.</li>
-            <li><strong>Class 5th & 8th Boards:</strong> Hindi and English Medium.</li>
-        </ul>
-    </div>
+    <section style="padding: 60px 10%;">
+        <h2 class="fade-in" style="color: var(--gold); text-align: center; margin-bottom: 50px;">Specialized Academic Programs</h2>
+        
+        <div class="card fade-in">
+            <h3 style="color: var(--gold); margin-bottom: 20px;"><i class="fas fa-medal"></i> Entrance Exam Coaching</h3>
+            <p style="color: #ccc; margin-bottom: 15px;">Expert guidance for competitive school entrance exams, focusing on accuracy and speed:</p>
+            <ul style="margin-left: 20px; color: #fff;">
+                <li style="margin-bottom: 8px;">Jawahar Navodaya Vidyalaya Selection Test (Class 5th & 8th)</li>
+                <li style="margin-bottom: 8px;">Sainik School Entrance Examination</li>
+                <li style="margin-bottom: 8px;">Excellence School Entrance Test</li>
+            </ul>
+        </div>
 
-    <div style="background: #fff8e1; padding: 20px; border-radius: 10px; border-left: 5px solid #ffc107;">
-        <h4>Important Notice:</h4>
-        <p>At Talent Academy, we ensure systematic and timely syllabus completion. Our methodology includes regular weekly assessments and individual attention to every student in an offline learning environment.</p>
-    </div>
-</section>
+        <div class="card fade-in">
+            <h3 style="color: var(--gold); margin-bottom: 20px;"><i class="fas fa-user-graduate"></i> Board Academic Classes</h3>
+            <p style="color: #ccc; margin-bottom: 15px;">Comprehensive coaching for Hindi & English Medium boards:</p>
+            <ul style="margin-left: 20px; color: #fff;">
+                <li style="margin-bottom: 8px;"><strong>Class 12th:</strong> Physics, Chemistry, Maths (PCM), Biology (PCB), Commerce, and Arts.</li>
+                <li style="margin-bottom: 8px;"><strong>Class 10th:</strong> Complete subject coverage with conceptual clarity.</li>
+                <li style="margin-bottom: 8px;"><strong>Class 5th & 8th Boards:</strong> Foundation-focused coaching for academic excellence.</li>
+            </ul>
+        </div>
+
+        <div class="card fade-in" style="background: rgba(255, 215, 0, 0.05); border-left: 5px solid var(--gold);">
+            <h3 style="color: var(--gold); margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Important Academic Notice</h3>
+            <p style="color: #ddd; line-height: 1.6;">
+                At Talent Academy, all classes are conducted with strict discipline and a focused academic environment. 
+                Our institution ensures that every concept is explained with clarity and reinforced through regular 
+                practice sessions and weekly assessments to track performance.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        });
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
+
+    <footer>
+        <p>© 2026 Talent Academy | Piplia Mandi</p>
+    </footer>
+</body>
+</html>
