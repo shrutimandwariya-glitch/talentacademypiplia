@@ -41,3 +41,14 @@ nav {
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 footer { text-align: center; padding: 40px; border-top: 1px solid #333; font-size: 0.9rem; color: #888; }
+/* WhatsApp Button Fix */
+.btn-wa {
+    background: #25D366 !important;
+    color: white !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ensure images and maps don't overflow */
+iframe, img { max-width: 100%; height: auto; }
