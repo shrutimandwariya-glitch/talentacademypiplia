@@ -1,0 +1,164 @@
+:root {
+    --gold: #FFD700;
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.cta-nav {
+    background: var(--gold);
+    color: black !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('classroom.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-call {
+    background: var(--gold);
+    color: black;
+}
+
+.btn-wa {
+    background: #25D366;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Common Section Style */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+/* Cards & Tables */
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--gold);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    background: var(--gold);
+    color: black;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 40px 10%;
+    border-top: 1px solid #333;
+    text-align: center;
+}
