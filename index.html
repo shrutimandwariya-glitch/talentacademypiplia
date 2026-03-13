@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talent Academy | Piplia Mandi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #111; color: #fff; line-height: 1.6; }
+        
+        /* Header & Logo */
+        header { text-align: center; padding: 20px; background: linear-gradient(180deg, #222, #000); border-bottom: 3px solid #FFD700; }
+        .logo { width: 100px; margin-bottom: 10px; }
+        h1 { color: #FFD700; font-size: 2.5rem; letter-spacing: 2px; }
+
+        /* Director Section */
+        .director-card { text-align: center; padding: 40px 20px; }
+        .director-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #FFD700; object-fit: cover; margin-bottom: 15px; }
+        .director-info h2 { color: #FFD700; margin-bottom: 5px; }
+        .qual { font-style: italic; color: #ccc; font-size: 0.9rem; }
+
+        /* Quick Action Buttons */
+        .contact-actions { display: flex; justify-content: center; gap: 20px; margin: 30px 0; padding: 0 10px; }
+        .btn { text-decoration: none; color: #fff; padding: 12px 25px; border-radius: 50px; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-call { background: #FFD700; color: #000; }
+        .btn-wa { background: #25D366; }
+        .btn:hover { transform: scale(1.05); }
+
+        /* Info Section */
+        .info-box { background: #222; margin: 20px; padding: 20px; border-radius: 10px; border-left: 5px solid #FFD700; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 20px; font-size: 0.8rem; border-top: 1px solid #333; margin-top: 40px; }
+    </style>
 </head>
+<body>
 
-<body style="background-color: black; color: white; text-align: center; font-family: Arial;">
-    <h1>Talent Academy - Coming Soon</h1>
-    <p>Director: Sachin Karada</p>
-    <p>Contact: 96919 19947</p>
+    <header>
+        <img src="logo.png" alt="TA Logo" class="logo">
+        <h1>TALENT ACADEMY</h1>
+        <p>Piplia Mandi, Dist. Mandsaur</p>
+    </header>
+
+    <section class="director-card">
+        <img src="director.jpg" alt="Director Sachin Karada" class="director-img">
+        <div class="director-info">
+            <h2>Sachin Karada</h2>
+            <p class="qual">M.Sc(Chemistry) & M.Sc(Maths) & MBA & B.Ed</p>
+            <p style="margin-top: 10px; color: #FFD700;">Director & Owner</p>
+        </div>
+    </section>
+
+    <div class="contact-actions">
+        <a href="tel:+919691919947" class="btn btn-call">
+            <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+        <a href="https://wa.me/919691919947" class="btn btn-wa">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+
+    <section class="info-box">
+        <h3>Why Talent Academy?</h3>
+        <ul style="list-style: none; margin-top: 10px;">
+            <li>✅ Weekly Tests & Regular Performance Analysis</li>
+            <li>✅ Proper Classes for All Subjects</li>
+            <li>✅ Experienced Mentorship</li>
+            <li>✅ Special Focus on Entrance Exams</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Address: Shubh Shree Complex 1st floor, Mundra Colony, Piplia Mandi</p>
+        <p>© 2026 Talent Academy. All Rights Reserved.</p>
+    </footer>
+
 </body>
-
 </html>
