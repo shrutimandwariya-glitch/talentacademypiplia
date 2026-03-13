@@ -9,33 +9,52 @@
 </head>
 <body>
     <nav>
-        <div style="font-weight: bold; font-size: 1.5rem; color: var(--primary);">TALENT ACADEMY</div>
+        <div style="font-weight: bold; font-size: 1.5rem; color: var(--gold);">TALENT ACADEMY</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="courses.html">Courses</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="cta-nav">Enquire Now</a></li>
         </ul>
     </nav>
 
     <div class="hero fade-in">
-        <h1>Welcome to Talent Academy, Piplia Mandi</h1>
-        <p>Building a Strong Foundation for Your Future Excellence.</p>
-        <div style="margin-top: 25px;">
-            <a href="tel:+919691919947" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
-            <a href="https://wa.me/919691919947" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        </div>
-        <img src="classroom_main.jpg" alt="Our Classroom" class="classroom-preview fade-in">
+        <h1 style="color: var(--gold); font-size: 3rem; margin-bottom: 20px;">Welcome to Talent Academy, Piplia Mandi</h1>
+        <p style="margin-bottom: 30px; font-size: 1.2rem;">Building a Strong Foundation for Your Future Excellence.</p>
+        
+        <img src="classroom_main.jpg" alt="Classroom" style="width: 100%; max-width: 850px; border-radius: 15px; border: 2px solid var(--gold); margin-bottom: 40px;">
     </div>
 
+    <section style="padding: 60px 10%;">
+        <h2 style="text-align: center; color: var(--gold); margin-bottom: 40px;">WHY CHOOSE US?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div class="card fade-in">
+                <i class="fas fa-check-circle" style="color: var(--gold); font-size: 2rem; margin-bottom: 15px;"></i>
+                <h3>Weekly Tests</h3>
+                <p>Regular assessments conducted every Sunday to ensure consistent progress.</p>
+            </div>
+            <div class="card fade-in">
+                <i class="fas fa-clock" style="color: var(--gold); font-size: 2rem; margin-bottom: 15px;"></i>
+                <h3>Timely Syllabus</h3>
+                <p>Systematic approach to complete the entire syllabus well ahead of time.</p>
+            </div>
+            <div class="card fade-in">
+                <i class="fas fa-users" style="color: var(--gold); font-size: 2rem; margin-bottom: 15px;"></i>
+                <h3>Personal Attention</h3>
+                <p>Small batches for offline focused learning, ensuring every student is heard.</p>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Simple Intersection Observer for Animations (AOS effect)
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         });
         document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
     </script>
+
+    <footer>
+        <p>© 2026 Talent Academy | Piplia Mandi</p>
+    </footer>
 </body>
 </html>
